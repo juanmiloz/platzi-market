@@ -7,21 +7,18 @@ import lombok.Data;
 @Table(name = "compras_productos")
 @Data
 public class ComprasProducto {
-
     @EmbeddedId
-    private ComprasPorductoPK id;
+    private ComprasProductoPK id;
 
-    private String cantidad;
-
+    private Integer cantidad;
     private Double total;
-
     private Boolean estado;
 
-    @ManyToOne()
+    @ManyToOne
     @JoinColumn(name = "id_compra", insertable = false, updatable = false)
     private Compra compra;
 
-    @ManyToOne()
+    @ManyToOne
     @JoinColumn(name = "id_producto", insertable = false, updatable = false)
     private Producto producto;
 }

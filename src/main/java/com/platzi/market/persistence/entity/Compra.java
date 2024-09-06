@@ -22,16 +22,15 @@ public class Compra {
     private LocalDateTime fecha;
 
     @Column(name = "medio_pago")
-    private Character medioPago;
+    private String medioPago;
 
     private String comentario;
-
-    private Character estado;
+    private String estado;
 
     @ManyToOne
     @JoinColumn(name = "id_cliente", insertable = false, updatable = false)
     private Cliente cliente;
 
-    @OneToMany(mappedBy = "producto")
+    @OneToMany(mappedBy = "compra")
     private List<ComprasProducto> productos;
 }

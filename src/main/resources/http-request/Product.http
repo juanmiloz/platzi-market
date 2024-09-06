@@ -1,0 +1,36 @@
+# Obtener todos los productos
+#@name GetAll
+GET http://localhost:8090/platzi-market/api/products/all
+
+###
+
+#Obtener producto por id
+#@name GetProductById
+GET http://localhost:8090/platzi-market/api/products/51
+
+###
+
+#Obtener productos por categoria
+#@name GetProductByCategoryId
+GET http://localhost:8090/platzi-market/api/products/category/1
+
+###
+
+#Crear producto
+#@name CreateProduct
+POST http://localhost:8090/platzi-market/api/products/save
+Content-Type: application/json
+
+{
+    "name": "Lechuga",
+    "categoryId": 1,
+    "price": 2000,
+    "stock": 60,
+    "active": true
+}
+
+###
+
+#Product delete
+#@name DeleteProduct
+DELETE http://localhost:8090/platzi-market/api/products/delete/52

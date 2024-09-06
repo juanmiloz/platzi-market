@@ -14,11 +14,16 @@ import java.util.Optional;
 @Repository
 public class ProductoRepository implements ProductRepository {
 
-    @Autowired
+    //@Autowired // Añadir autowired directamente en la variable no es recomendable
     private ProductoCrudRepository productoCrudRepository;
 
-    @Autowired
+    //@Autowired
     private ProductMapper mapper;
+
+    public ProductoRepository(ProductoCrudRepository productoCrudRepository, ProductMapper mapper) {
+        this.productoCrudRepository = productoCrudRepository;
+        this.mapper = mapper;
+    }
 
     @Override
     public List<Product> getAll() {
