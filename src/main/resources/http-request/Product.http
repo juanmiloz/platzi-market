@@ -6,7 +6,7 @@ GET http://localhost:8090/platzi-market/api/products/all
 
 #Obtener producto por id
 #@name GetProductById
-GET http://localhost:8090/platzi-market/api/products/51
+GET http://localhost:8090/platzi-market/api/products/3
 
 ###
 

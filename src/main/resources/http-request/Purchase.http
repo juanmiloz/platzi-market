@@ -1,0 +1,39 @@
+#Obtener todas las compras
+#@name GetAllPurchase
+GET http://localhost:8090/platzi-market/api/purchases/all
+
+###
+
+#Obtener compra por id
+#@name GetPurchaseByClientId
+GET http://localhost:8090/platzi-market/api/purchases/client/4546221
+
+###
+
+#Crear compra
+#@name CreatePurchase
+POST http://localhost:8090/platzi-market/api/purchases/save
+Content-Type: application/json
+
+{
+    "clientId": "4546221",
+    "date": "2020-12-31T13:40:00",
+    "paymentMethod": "T",
+    "comment": "",
+    "state": "P",
+    "items": [
+      {
+        "productId": 1,
+        "quantity": 10,
+        "total": 3000.0,
+        "active": true
+      },
+      {
+        "productId": 3,
+        "quantity": 20,
+        "total": 14000.0,
+        "active": true
+      }
+    ]
+  }
+
